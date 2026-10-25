@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WAREGRO Visual Identity</title>
+<style>
+@font-face{font-family:Urbanist;font-weight:400;src:url(../fonts/Urbanist-400.ttf)}
+@font-face{font-family:Urbanist;font-weight:500;src:url(../fonts/Urbanist-500.ttf)}
+@font-face{font-family:Urbanist;font-weight:700;src:url(../fonts/Urbanist-700.ttf)}
+@font-face{font-family:Urbanist;font-weight:800;src:url(../fonts/Urbanist-800.ttf)}
+@font-face{font-family:Urbanist;font-weight:900;src:url(../fonts/Urbanist-900.ttf)}
+@font-face{font-family:Readex;font-weight:300;src:url(../fonts/ReadexPro-300.ttf)}
+@font-face{font-family:Readex;font-weight:400;src:url(../fonts/ReadexPro-400.ttf)}
+@font-face{font-family:Readex;font-weight:500;src:url(../fonts/ReadexPro-500.ttf)}
+@font-face{font-family:Readex;font-weight:600;src:url(../fonts/ReadexPro-600.ttf)}
+@font-face{font-family:Readex;font-weight:700;src:url(../fonts/ReadexPro-700.ttf)}
+
+:root{
+  --orange:#FF5300; --brown:#952801; --linen:#FFECE5; --ink:#1A1A1A; --white:#fff;
+  --latin:'Gelion','Urbanist',sans-serif; --arabic:'Readex',sans-serif;
+}
+@page{size:297mm 210mm;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#888}
+body{font-family:var(--latin);color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:297mm;height:210mm;position:relative;overflow:hidden;background:var(--white);page-break-after:always;break-after:page;padding:20mm 22mm}
+@media screen{.page{margin:0 auto 10px}}
+.ar{font-family:var(--arabic);direction:rtl}
+.folio{position:absolute;left:22mm;right:22mm;bottom:9mm;display:flex;justify-content:space-between;font-size:9pt;letter-spacing:.12em;text-transform:uppercase;color:var(--brown);opacity:.75}
+.folio img{height:14px}
+.kicker{font-size:10pt;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin:0 0 4mm}
+h1{font-size:40pt;font-weight:800;line-height:1;margin:0 0 6mm;color:var(--brown);letter-spacing:-.01em}
+h2{font-size:20pt;font-weight:800;margin:0 0 3mm;color:var(--brown)}
+p{font-size:11pt;line-height:1.55;margin:0 0 3mm;max-width:120mm}
+.ar p,p.ar{font-size:11.5pt;line-height:1.8}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14mm;align-items:start}
+.num{font-size:64pt;font-weight:900;color:var(--orange);line-height:.9}
+.dark{background:var(--brown);color:var(--linen)}
+.dark h1,.dark h2{color:var(--linen)} .dark .folio{color:var(--linen)}
+.orange{background:var(--orange);color:#fff}
+.orange h1,.orange h2,.orange .kicker{color:#fff} .orange .folio{color:#fff}
+.linen{background:var(--linen)}
+.card{border-radius:5mm;display:flex;align-items:center;justify-content:center}
+.small{font-size:9pt;line-height:1.5;opacity:.8}
+.pattern{position:absolute;inset:0;background-image:url(../logo/svg/waregro-mark-white.svg);background-size:22mm auto;background-repeat:space;opacity:.08}
+.pattern.brown{background-image:url(../logo/svg/waregro-mark-orange.svg);opacity:.10}
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<section class="page orange" style="padding:0">
+  <div class="pattern"></div>
+  <div style="position:absolute;left:22mm;top:20mm;font-size:10pt;letter-spacing:.24em;font-weight:700">VISUAL IDENTITY · 2026</div>
+  <img src="../logo/svg/waregro-horizontal-white.svg" style="position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:170mm">
+  <div style="position:absolute;left:22mm;bottom:18mm;font-size:12pt;font-weight:700">Brand Guidelines</div>
+  <div class="ar" style="position:absolute;right:22mm;bottom:18mm;font-size:13pt;font-weight:500">دليل الهوية البصرية</div>
+</section>
+
+<!-- 02 CONTENTS -->
+<section class="page">
+  <p class="kicker">Contents · المحتويات</p>
+  <h1>Inside this guide</h1>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4mm 14mm;margin-top:10mm;font-size:12pt">
+    <div><b style="color:var(--orange)">01</b>&nbsp; Our brand</div>
+    <div><b style="color:var(--orange)">07</b>&nbsp; Colour versions</div>
+    <div><b style="color:var(--orange)">13</b>&nbsp; Type hierarchy</div>
+    <div><b style="color:var(--orange)">02</b>&nbsp; Mission &amp; vision</div>
+    <div><b style="color:var(--orange)">08</b>&nbsp; Clear space &amp; sizes</div>
+    <div><b style="color:var(--orange)">14</b>&nbsp; Graphic elements</div>
+    <div><b style="color:var(--orange)">03</b>&nbsp; Brand values</div>
+    <div><b style="color:var(--orange)">09</b>&nbsp; Logo misuse</div>
+    <div><b style="color:var(--orange)">15</b>&nbsp; Tone of voice</div>
+    <div><b style="color:var(--orange)">04</b>&nbsp; Logo meaning</div>
+    <div><b style="color:var(--orange)">10</b>&nbsp; Colour palette</div>
+    <div><b style="color:var(--orange)">16</b>&nbsp; Applications</div>
+    <div><b style="color:var(--orange)">05</b>&nbsp; Logo mark &amp; word mark</div>
+    <div><b style="color:var(--orange)">11</b>&nbsp; Typography · Latin</div>
+    <div><b style="color:var(--orange)">17</b>&nbsp; File guide</div>
+    <div><b style="color:var(--orange)">06</b>&nbsp; Logo lockups</div>
+    <div><b style="color:var(--orange)">12</b>&nbsp; Typography · Arabic</div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>02</span></div>
+</section>
+
+<!-- 03 OUR BRAND -->
+<section class="page linen">
+  <div class="cols" style="height:100%">
+    <div>
+      <p class="kicker">01 · Our brand</p>
+      <h1>Buy your stock.<br>Grow your business.</h1>
+      <p>WAREGRO is the e-commerce marketplace where shop owners, retailers and resellers buy their stock online, from trusted suppliers, at fair prices and delivered to their door.</p>
+      <p>The name says it all: <b>WARE</b> — the goods, the stock, the box — and <b>GRO</b> — growth. Every order on WAREGRO is a step forward for the business behind it.</p>
+    </div>
+    <div class="ar" style="padding-top:18mm">
+      <h2 style="font-family:var(--arabic)">من نحن</h2>
+      <p>ويرغرو منصة تجارة إلكترونية تمكّن أصحاب المحلات والتجار من شراء سلعهم أونلاين من موردين موثوقين، بأسعار عادلة وتوصيل حتى باب المحل.</p>
+      <p>الاسم يختصر الفكرة: <b>WARE</b> تعني السلعة والصندوق، و<b>GRO</b> تعني النمو. كل طلبية على ويرغرو خطوة إلى الأمام لتجارتك.</p>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>03</span></div>
+</section>
+
+<!-- 04 MISSION / VISION -->
+<section class="page">
+  <p class="kicker">02 · Mission &amp; vision</p>
+  <h1>Why we exist</h1>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10mm;margin-top:10mm">
+    <div style="border-top:3px solid var(--orange);padding-top:5mm">
+      <h2>Mission</h2>
+      <p>Make buying stock as simple as a few taps, so every retailer can spend less time sourcing and more time selling.</p>
+      <p class="ar">نجعل شراء السلع سهلاً ببضع نقرات، ليقضي التاجر وقتاً أقل في البحث ووقتاً أكثر في البيع.</p>
+    </div>
+    <div style="border-top:3px solid var(--orange);padding-top:5mm">
+      <h2>Vision</h2>
+      <p>To be the lead marketplace for wholesale e-commerce in the region, the first place a business thinks of when it needs stock.</p>
+      <p class="ar">أن نكون المنصة الرائدة في تجارة الجملة الإلكترونية في المنطقة.</p>
+    </div>
+    <div style="border-top:3px solid var(--orange);padding-top:5mm">
+      <h2>Promise</h2>
+      <p>Guaranteed products, transparent prices, on-time delivery, and a partner that grows with you.</p>
+      <p class="ar">منتجات مضمونة، أسعار واضحة، توصيل في الوقت، وشريك يكبر معك.</p>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>04</span></div>
+</section>
+
+<!-- 05 VALUES -->
+<section class="page dark">
+  <div class="pattern brown"></div>
+  <p class="kicker">03 · Brand values</p>
+  <h1>What we stand for</h1>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6mm;margin-top:14mm;position:relative">
+    <div><div class="num">01</div><h2>Guarantee</h2><p class="small">Every product and every order is backed by us.</p><p class="ar" style="font-size:14pt">الضمان</p></div>
+    <div><div class="num">02</div><h2>Confidence</h2><p class="small">Clear prices and honest information, always.</p><p class="ar" style="font-size:14pt">الثقة</p></div>
+    <div><div class="num">03</div><h2>Cooperation</h2><p class="small">Suppliers, retailers and our team win together.</p><p class="ar" style="font-size:14pt">التعاون</p></div>
+    <div><div class="num">04</div><h2>Progress</h2><p class="small">We keep improving the way businesses buy.</p><p class="ar" style="font-size:14pt">التقدّم</p></div>
+    <div><div class="num">05</div><h2>Growth</h2><p class="small">Our success is measured by our customers' growth.</p><p class="ar" style="font-size:14pt">النمو</p></div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-on-brown.svg" style="opacity:.9"><span>05</span></div>
+</section>
+
+<!-- 06 LOGO MEANING -->
+<section class="page">
+  <p class="kicker">04 · Logo meaning</p>
+  <h1>Letter W + box + growth</h1>
+  <div style="display:flex;align-items:center;justify-content:center;gap:9mm;margin-top:10mm">
+    <figure style="margin:0;text-align:center">
+      <svg viewBox="-20 40 450 340" style="width:46mm"><polyline fill="none" stroke="#FF5300" stroke-width="30.26" stroke-linecap="round" stroke-linejoin="round" points="394.17,186.64 394.17,405.45 204.65,298.01 15.13,407.45 15.13,186.64" transform="translate(0,-61)"/></svg>
+      <figcaption style="font-weight:700;color:var(--brown);margin-top:3mm">Letter W</figcaption><div class="small">Ware, the first letter of our name</div>
+    </figure>
+    <div style="font-size:30pt;color:var(--orange);font-weight:800">+</div>
+    <figure style="margin:0;text-align:center">
+      <svg viewBox="-20 0 450 480" style="width:46mm"><g fill="none" stroke="#952801" stroke-width="30.26" stroke-linecap="round" stroke-linejoin="round"><polygon points="394.14,125.64 206.53,15.13 15.13,125.64 204.65,237.01"/><polyline points="15.13,125.64 15.13,346.45 204.66,453.86 394.17,344.45 394.17,125.64"/><line x1="204.65" y1="237.01" x2="204.65" y2="453.86"/></g></svg>
+      <figcaption style="font-weight:700;color:var(--brown);margin-top:3mm">The box</figcaption><div class="small">Stock, goods, delivery</div>
+    </figure>
+    <div style="font-size:30pt;color:var(--orange);font-weight:800">+</div>
+    <figure style="margin:0;text-align:center">
+      <svg viewBox="80 -80 250 360" style="width:30mm"><g fill="none" stroke="#FF5300" stroke-width="30.26" stroke-linecap="round" stroke-linejoin="round"><line x1="204.65" y1="237" x2="204.65" y2="-40"/><polyline points="130,30 204.65,-45 279.3,30"/></g></svg>
+      <figcaption style="font-weight:700;color:var(--brown);margin-top:3mm">Growth arrow</figcaption><div class="small">Business that keeps rising</div>
+    </figure>
+    <div style="font-size:30pt;color:var(--orange);font-weight:800">=</div>
+    <figure style="margin:0;text-align:center">
+      <img src="../logo/svg/waregro-mark-primary.svg" style="width:52mm">
+      <figcaption style="font-weight:700;color:var(--brown);margin-top:1mm">WAREGRO mark</figcaption><div class="small">The box opens, the business grows</div>
+    </figure>
+  </div>
+  <p style="max-width:none;text-align:center;margin-top:9mm">The lid of the box is open and an arrow rises out of it: what goes into a WAREGRO order comes out as growth.</p>
+  <p class="ar" style="max-width:none;text-align:center">الصندوق مفتوح وسهم النمو يخرج منه: كل ما تطلبه من ويرغرو يتحوّل إلى نمو لتجارتك.</p>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>06</span></div>
+</section>
+
+<!-- 07 LOGO MARK CONSTRUCTION -->
+<section class="page linen">
+  <div class="cols">
+    <div>
+      <p class="kicker">05 · Logo mark</p>
+      <h1>Built on the box</h1>
+      <p>The mark is drawn on an isometric grid with a single stroke weight and rounded caps and joins. The stroke is 7.4% of the mark's width, so the mark stays bold even at small sizes.</p>
+      <p>The W and the arrow are always in Mystic Red. The box is in Deep Ember, or in the colour of the background version (see page 10).</p>
+      <div style="display:flex;gap:6mm;margin-top:10mm;align-items:flex-end">
+        <img src="../logo/svg/waregro-mark-primary.svg" style="height:34mm">
+        <img src="../logo/svg/waregro-mark-primary.svg" style="height:20mm">
+        <img src="../logo/svg/waregro-mark-primary.svg" style="height:12mm">
+        <img src="../logo/svg/waregro-mark-primary.svg" style="height:7mm">
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center">
+      <svg viewBox="-60 -110 530 620" style="height:150mm">
+        <defs><pattern id="iso" width="47.4" height="27.4" patternUnits="userSpaceOnUse"><path d="M0 0 L47.4 27.4 M47.4 0 L0 27.4" stroke="#95280133" stroke-width="1"/></pattern></defs>
+        <rect x="-60" y="-110" width="530" height="620" fill="url(#iso)"/>
+        <g stroke="#FF5300" stroke-width="1.2" stroke-dasharray="6 5" fill="none">
+          <line x1="-60" y1="125.6" x2="470" y2="125.6"/><line x1="-60" y1="346" x2="470" y2="346"/>
+          <line x1="15" y1="-110" x2="15" y2="510"/><line x1="394" y1="-110" x2="394" y2="510"/><line x1="204.6" y1="-110" x2="204.6" y2="510"/>
+          <line x1="-60" y1="-45" x2="470" y2="-45"/><line x1="-60" y1="453.9" x2="470" y2="453.9"/>
+        </g>
+        <g fill="none" stroke-width="30.26" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke="#952801"><polyline points="394.17,344.45 204.66,453.86 15.13,346.45"/><polyline points="394.14,125.64 204.65,237.01 15.13,125.64"/><polyline points="204.65,237.01 204.65,453.86"/></g>
+          <g stroke="#FF5300"><polyline points="394.17,125.64 394.17,344.45 204.65,237.01 15.13,346.45 15.13,125.64"/><polyline points="204.65,237.01 204.65,-40"/><polyline points="130,30 204.65,-45 279.3,30"/></g>
+        </g>
+        <g font-family="Urbanist" font-size="15" fill="#952801" font-weight="700">
+          <text x="420" y="130">30°</text><text x="-50" y="-50">arrow top</text><text x="-50" y="460">base</text>
+          <text x="230" y="500">axis</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>07</span></div>
+</section>
+
+<!-- 08 WORDMARK -->
+<section class="page">
+  <p class="kicker">05 · Word mark</p>
+  <h1>One name, two scripts</h1>
+  <div class="cols" style="margin-top:8mm">
+    <div>
+      <img src="../logo/svg/waregro-wordmark-latin-primary.svg" style="width:115mm;display:block;margin-bottom:6mm">
+      <p>The Latin word mark is set in heavy geometric capitals with open tracking, the same family of letters as the Waresouq system.</p>
+    </div>
+    <div class="ar">
+      <img src="../logo/svg/waregro-wordmark-arabic-primary.svg" style="width:115mm;display:block;margin-bottom:6mm">
+      <p>الكلمة العربية «ويرغرو» مكتوبة بخط هندسي، مع تمديد الكشيدة ليتساوى عرضها مع الكلمة اللاتينية.</p>
+    </div>
+  </div>
+  <p class="small" style="max-width:none;margin-top:10mm">Both word marks are supplied as outlined vector files. Never re-type the logo in a font. The Arabic and Latin word marks are always the same width when used together.</p>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>08</span></div>
+</section>
+
+<!-- 09 LOCKUPS -->
+<section class="page">
+  <p class="kicker">06 · Logo lockups</p>
+  <h1>Primary &amp; stacked</h1>
+  <div style="display:grid;grid-template-columns:1.7fr 1fr;gap:10mm;margin-top:6mm">
+    <div class="card linen" style="height:105mm"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:125mm"></div>
+    <div class="card linen" style="height:105mm"><img src="../logo/svg/waregro-stacked-primary.svg" style="height:85mm"></div>
+    <div><b style="color:var(--brown)">Horizontal (primary)</b><div class="small">Website header, documents, signage, social covers.</div></div>
+    <div><b style="color:var(--brown)">Stacked</b><div class="small">Square formats, packaging, profile pages, merchandise.</div></div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>09</span></div>
+</section>
+
+<!-- 10 COLOUR VERSIONS -->
+<section class="page">
+  <p class="kicker">07 · Colour versions</p>
+  <h1>The right logo for every background</h1>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:6mm">
+    <div class="card" style="height:46mm;background:#fff;border:1px solid #eee"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:70mm"></div>
+    <div class="card" style="height:46mm;background:var(--linen)"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:70mm"></div>
+    <div class="card" style="height:46mm;background:var(--orange)"><img src="../logo/svg/waregro-horizontal-on-orange.svg" style="width:76mm"></div>
+    <div class="card" style="height:46mm;background:var(--brown)"><img src="../logo/svg/waregro-horizontal-on-brown.svg" style="width:76mm"></div>
+    <div class="card" style="height:46mm;background:#fff;border:1px solid #eee"><img src="../logo/svg/waregro-horizontal-black.svg" style="width:70mm"></div>
+    <div class="card" style="height:46mm;background:#1A1A1A"><img src="../logo/svg/waregro-horizontal-white.svg" style="width:70mm"></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:3mm" class="small">
+    <div>Primary: on white and light backgrounds</div><div>Primary on Linen</div><div>On Mystic Red: white + Deep Ember</div>
+    <div>On Deep Ember: Linen + Mystic Red</div><div>One colour black: fax, stamps, newspapers</div><div>One colour white: photos and dark surfaces</div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>10</span></div>
+</section>
+
+<!-- 11 CLEAR SPACE -->
+<section class="page linen">
+  <div class="cols">
+    <div>
+      <p class="kicker">08 · Clear space &amp; minimum size</p>
+      <h1>Give it room</h1>
+      <p>Keep a clear space around the logo equal to the height of the letter <b>W</b> in the word mark (marked <b>x</b>). No text, image or edge may enter this area.</p>
+      <h2 style="margin-top:10mm">Minimum sizes</h2>
+      <table style="font-size:10.5pt;border-collapse:collapse;width:100%">
+        <tr style="border-bottom:1px solid #95280144"><td style="padding:2mm 0">Horizontal logo</td><td>30 mm print</td><td>120 px screen</td></tr>
+        <tr style="border-bottom:1px solid #95280144"><td style="padding:2mm 0">Stacked logo</td><td>20 mm print</td><td>80 px screen</td></tr>
+        <tr><td style="padding:2mm 0">Mark only</td><td>6 mm print</td><td>16 px screen</td></tr>
+      </table>
+    </div>
+    <div style="display:flex;justify-content:center;align-items:center;height:150mm">
+      <div style="position:relative;padding:15mm;border:1.5px dashed var(--orange);background:#fff">
+        <img src="../logo/svg/waregro-horizontal-primary.svg" style="width:100mm;display:block">
+        <span style="position:absolute;top:4mm;left:50%;font-weight:800;color:var(--orange)">x</span>
+        <span style="position:absolute;bottom:4mm;left:50%;font-weight:800;color:var(--orange)">x</span>
+        <span style="position:absolute;left:5mm;top:50%;font-weight:800;color:var(--orange)">x</span>
+        <span style="position:absolute;right:5mm;top:50%;font-weight:800;color:var(--orange)">x</span>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>11</span></div>
+</section>
+
+<!-- 12 MISUSE -->
+<section class="page">
+  <p class="kicker">09 · Logo misuse</p>
+  <h1>Please don't</h1>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6mm;margin-top:6mm">
+    <div><div class="card linen" style="height:40mm;overflow:hidden"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:52mm;transform:scaleX(1.45)"></div><p class="small"><b>✕</b> Stretch or squash it</p></div>
+    <div><div class="card linen" style="height:40mm;overflow:hidden"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:52mm;filter:hue-rotate(150deg)"></div><p class="small"><b>✕</b> Change the colours</p></div>
+    <div><div class="card linen" style="height:40mm;overflow:hidden"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:52mm;transform:rotate(-14deg)"></div><p class="small"><b>✕</b> Rotate it</p></div>
+    <div><div class="card linen" style="height:40mm;overflow:hidden"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:52mm;filter:drop-shadow(3mm 3mm 2mm rgba(0,0,0,.55))"></div><p class="small"><b>✕</b> Add shadows or effects</p></div>
+    <div><div class="card" style="height:40mm;overflow:hidden;background:var(--orange)"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:52mm"></div><p class="small"><b>✕</b> Use the primary logo on Mystic Red</p></div>
+    <div><div class="card linen" style="height:40mm;overflow:hidden"><span style="font-family:serif;font-size:24pt;color:var(--brown)">Waregro</span></div><p class="small"><b>✕</b> Re-type the name in another font</p></div>
+    <div><div class="card linen" style="height:40mm;overflow:hidden;gap:3mm"><img src="../logo/svg/waregro-wordmark-latin-primary.svg" style="width:34mm"><img src="../logo/svg/waregro-mark-primary.svg" style="height:16mm"></div><p class="small"><b>✕</b> Rearrange the elements</p></div>
+    <div><div class="card" style="height:40mm;overflow:hidden;background:repeating-linear-gradient(45deg,#ff9a66 0 6mm,#952801 6mm 12mm)"><img src="../logo/svg/waregro-horizontal-primary.svg" style="width:52mm"></div><p class="small"><b>✕</b> Place it on busy backgrounds</p></div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>12</span></div>
+</section>
+
+<!-- 13 COLOUR PALETTE -->
+<section class="page">
+  <p class="kicker">10 · Colour palette</p>
+  <h1>Warm, bold, trustworthy</h1>
+  <div style="display:grid;grid-template-columns:2fr 1.4fr 1.4fr 1fr;gap:5mm;height:95mm;margin-top:6mm">
+    <div style="background:var(--orange);color:#fff;border-radius:4mm;padding:6mm;display:flex;flex-direction:column;justify-content:flex-end">
+      <b style="font-size:17pt">Mystic Red</b><span class="small" style="opacity:1">HEX #FF5300<br>RGB 255 · 83 · 0<br>CMYK 0 · 67 · 100 · 0<br>Pantone 1655 C (closest)</span></div>
+    <div style="background:var(--brown);color:var(--linen);border-radius:4mm;padding:6mm;display:flex;flex-direction:column;justify-content:flex-end">
+      <b style="font-size:17pt">Deep Ember</b><span class="small" style="opacity:1">HEX #952801<br>RGB 149 · 40 · 1<br>CMYK 0 · 73 · 99 · 42<br>Pantone 7599 C (closest)</span></div>
+    <div style="background:var(--linen);color:var(--brown);border-radius:4mm;padding:6mm;display:flex;flex-direction:column;justify-content:flex-end">
+      <b style="font-size:17pt">Linen</b><span class="small" style="opacity:1">HEX #FFECE5<br>RGB 255 · 236 · 229<br>CMYK 0 · 7 · 10 · 0</span></div>
+    <div style="display:grid;grid-template-rows:1fr 1fr;gap:5mm">
+      <div style="background:var(--ink);color:#fff;border-radius:4mm;padding:4mm;display:flex;flex-direction:column;justify-content:flex-end"><b>Ink</b><span class="small" style="opacity:1">#1A1A1A</span></div>
+      <div style="background:#fff;border:1px solid #ddd;border-radius:4mm;padding:4mm;display:flex;flex-direction:column;justify-content:flex-end"><b>White</b><span class="small">#FFFFFF</span></div>
+    </div>
+  </div>
+  <div style="display:flex;height:7mm;margin-top:7mm;border-radius:2mm;overflow:hidden">
+    <div style="flex:45;background:var(--orange)"></div><div style="flex:25;background:var(--linen)"></div><div style="flex:20;background:var(--brown)"></div><div style="flex:10;background:var(--ink)"></div>
+  </div>
+  <p class="small" style="max-width:none;margin-top:2mm">Recommended balance: 45% Mystic Red · 25% Linen · 20% Deep Ember · 10% Ink. Use Linen instead of grey for light backgrounds.</p>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>13</span></div>
+</section>
+
+<!-- 14 TYPOGRAPHY LATIN -->
+<section class="page linen">
+  <div class="cols">
+    <div>
+      <p class="kicker">11 · Typography · Latin</p>
+      <h1 style="font-size:64pt">Gelion</h1>
+      <p style="font-size:14pt">Thin · Light · Regular · Medium · Bold</p>
+      <p>Gelion is the brand typeface for Latin text, the same as the Waresouq system: geometric, friendly and very readable.</p>
+      <p class="small">Free substitute for web and apps when Gelion is not licensed: <b>Urbanist</b> (Google Fonts). The specimens on this page use it as a fallback.</p>
+    </div>
+    <div style="padding-top:8mm">
+      <div style="font-size:24pt;font-weight:700;color:var(--brown);line-height:1.35">A B C D E F G H I J K L M<br>N O P Q R S T U V W X Y Z</div>
+      <div style="font-size:21pt;font-weight:400;line-height:1.35;margin-top:4mm">a b c d e f g h i j k l m<br>n o p q r s t u v w x y z</div>
+      <div style="font-size:21pt;font-weight:500;color:var(--orange);margin-top:4mm">0 1 2 3 4 5 6 7 8 9<br>! @ : ; ? % $ £ ( ) *</div>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>14</span></div>
+</section>
+
+<!-- 15 TYPOGRAPHY ARABIC -->
+<section class="page">
+  <div class="cols">
+    <div>
+      <p class="kicker">12 · Typography · Arabic</p>
+      <h1 style="font-size:58pt">Readex Pro</h1>
+      <p style="font-size:14pt">Light · Regular · Medium · SemiBold · Bold</p>
+      <p>Readex Pro is a free geometric Arabic typeface that matches the clean, round forms of Gelion. Use it for all Arabic headlines and text.</p>
+      <p class="small">Available free from Google Fonts. The font files are in the <b>fonts</b> folder of this kit.</p>
+    </div>
+    <div class="ar" style="padding-top:6mm">
+      <div style="font-size:44pt;font-weight:700;color:var(--brown)">السلام عليكم</div>
+      <div style="font-size:21pt;font-weight:500;line-height:1.8;margin-top:2mm">أ ب ت ث ج ح خ د ذ ر ز س ش ص<br>ض ط ظ ع غ ف ق ك ل م ن ه و ي</div>
+      <div style="font-size:22pt;font-weight:400;color:var(--orange);margin-top:2mm">٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩ ؟ ! ٪</div>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>15</span></div>
+</section>
+
+<!-- 16 TYPE HIERARCHY -->
+<section class="page">
+  <p class="kicker">13 · Type hierarchy</p>
+  <h1>Clear levels, both directions</h1>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <div style="font-size:34pt;font-weight:800;color:var(--brown);line-height:1.05">Headline 34/36</div>
+      <div style="font-size:20pt;font-weight:700;color:var(--orange);margin-top:3mm">Subtitle 20 Bold</div>
+      <p style="margin-top:3mm">Body text 11/17 Regular. Shop owners buy their stock online from trusted suppliers and get it delivered fast.</p>
+      <div class="small" style="text-transform:uppercase;letter-spacing:.2em;font-weight:700">Caption 9 · Tracking 200</div>
+      <div style="display:inline-block;margin-top:5mm;background:var(--orange);color:#fff;font-weight:700;padding:3mm 7mm;border-radius:20mm">Shop now</div>
+    </div>
+    <div class="ar">
+      <div style="font-size:32pt;font-weight:700;color:var(--brown);line-height:1.3">عنوان رئيسي</div>
+      <div style="font-size:19pt;font-weight:600;color:var(--orange);margin-top:2mm">عنوان فرعي</div>
+      <p style="margin-top:3mm">نص أساسي. أصحاب المحلات يشترون سلعهم أونلاين من موردين موثوقين ويستلمونها بسرعة.</p>
+      <div class="small" style="font-weight:600">تعليق صغير</div>
+      <div style="display:inline-block;margin-top:5mm;background:var(--orange);color:#fff;font-weight:600;padding:3mm 7mm;border-radius:20mm">تسوّق الآن</div>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>16</span></div>
+</section>
+
+<!-- 17 GRAPHIC ELEMENTS -->
+<section class="page dark" style="padding:0">
+  <div style="display:grid;grid-template-columns:1fr 1fr;height:100%">
+    <div style="padding:20mm 22mm">
+      <p class="kicker">14 · Graphic elements</p>
+      <h1>Pattern &amp; arrow</h1>
+      <p>The mark repeats as a brand pattern for packaging, backgrounds and social posts. Use it at 6–12% opacity so it never competes with content.</p>
+      <p>The rising arrow can be used alone as a graphic accent: next to numbers, growth figures and calls to action.</p>
+      <div style="display:flex;gap:6mm;margin-top:10mm;align-items:center">
+        <svg viewBox="100 -70 210 330" style="height:26mm"><g fill="none" stroke="#FF5300" stroke-width="30.26" stroke-linecap="round" stroke-linejoin="round"><line x1="204.65" y1="237" x2="204.65" y2="-40"/><polyline points="130,30 204.65,-45 279.3,30"/></g></svg>
+        <div style="font-size:40pt;font-weight:900;color:#fff">+38%</div>
+      </div>
+    </div>
+    <div style="position:relative;background:var(--orange)"><div class="pattern" style="opacity:.18;background-size:16mm auto"></div></div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-on-brown.svg"><span>17</span></div>
+</section>
+
+<!-- 18 TONE OF VOICE -->
+<section class="page linen">
+  <p class="kicker">15 · Tone of voice</p>
+  <h1>How WAREGRO speaks</h1>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;margin-top:6mm">
+    <div><h2>Simple</h2><p class="small">Short sentences. No jargon. A shop owner should understand us in 3 seconds.</p></div>
+    <div><h2>Confident</h2><p class="small">We are the lead marketplace and we speak like it: direct and sure, never arrogant.</p></div>
+    <div><h2>Encouraging</h2><p class="small">We talk about progress and growth, and we celebrate our customers' wins.</p></div>
+  </div>
+  <h2 style="margin-top:10mm">Taglines</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm 10mm;font-size:13pt">
+    <div><b style="color:var(--orange)">THE LEAD OF MARKETPLACE</b></div><div class="ar"><b style="color:var(--orange)">المنصة الرائدة في التجارة الإلكترونية</b></div>
+    <div>E-commerce becoming more easier</div><div class="ar">التجارة الإلكترونية أصبحت أسهل</div>
+    <div>With WAREGRO buy your stock online</div><div class="ar">مع ويرغرو اشترِ سلعتك أونلاين</div>
+    <div>Ready for change?</div><div class="ar">هل أنت مستعد للتغيير؟</div>
+    <div><b>Buy smart. Grow fast.</b></div><div class="ar"><b>اشترِ بذكاء، وكبّر تجارتك</b></div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>18</span></div>
+</section>
+
+<!-- 19 SOCIAL MEDIA -->
+<section class="page">
+  <p class="kicker">16 · Applications · Social media</p>
+  <h1>Posts</h1>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;margin-top:4mm">
+    <div style="aspect-ratio:1;background:var(--orange);border-radius:3mm;position:relative;overflow:hidden;padding:7mm;color:#fff">
+      <div class="pattern" style="opacity:.12"></div>
+      <img src="../logo/svg/waregro-horizontal-white.svg" style="width:32mm;position:relative">
+      <div style="position:absolute;left:7mm;bottom:15mm;font-size:20pt;font-weight:900;line-height:1.05">THE LEAD<br>OF MARKETPLACE</div>
+      <div style="position:absolute;left:7mm;bottom:7mm;font-size:9pt">Check our website <b>waregro.com</b></div>
+    </div>
+    <div class="ar" style="aspect-ratio:1;background:var(--linen);border-radius:3mm;position:relative;overflow:hidden;padding:7mm">
+      <img src="../logo/svg/waregro-horizontal-primary.svg" style="width:32mm">
+      <div style="position:absolute;right:7mm;top:30mm;font-size:21pt;font-weight:700;color:var(--brown);line-height:1.4">المنصة الرائدة في<br><span style="color:var(--orange)">التجارة الإلكترونية</span></div>
+      <div style="position:absolute;right:7mm;bottom:9mm;background:var(--orange);color:#fff;padding:2mm 6mm;border-radius:10mm;font-size:10pt">هل أنت مستعد للتغيير؟</div>
+    </div>
+    <div style="aspect-ratio:1;background:var(--brown);border-radius:3mm;position:relative;overflow:hidden;padding:7mm;color:var(--linen)">
+      <img src="../logo/svg/waregro-mark-on-brown.svg" style="position:absolute;right:-8mm;bottom:-8mm;height:40mm;opacity:.9">
+      <div style="font-size:10pt;letter-spacing:.2em;font-weight:700;color:var(--orange)">E-COMMERCE BECOMING MORE EASIER</div>
+      <div style="font-size:21pt;font-weight:800;line-height:1.1;margin-top:5mm">With WAREGRO<br>buy your stock<br>online</div>
+      <div style="position:absolute;left:7mm;bottom:7mm;font-size:9pt">waregro.com</div>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>19</span></div>
+</section>
+
+<!-- 20 STATIONERY -->
+<section class="page linen">
+  <p class="kicker">16 · Applications · Stationery</p>
+  <h1>Business cards &amp; letterhead</h1>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1.05fr;gap:8mm;margin-top:6mm;align-items:start">
+    <div style="aspect-ratio:85/55;background:var(--orange);border-radius:2mm;display:flex;align-items:center;justify-content:center;box-shadow:0 2mm 5mm rgba(149,40,1,.25);position:relative;overflow:hidden">
+      <div class="pattern" style="opacity:.1;background-size:12mm auto"></div>
+      <img src="../logo/svg/waregro-stacked-on-orange.svg" style="height:34mm;position:relative">
+    </div>
+    <div style="aspect-ratio:85/55;background:#fff;border-radius:2mm;box-shadow:0 2mm 5mm rgba(149,40,1,.25);padding:6mm;position:relative">
+      <div style="font-weight:800;color:var(--brown);font-size:12pt">Your Name</div>
+      <div style="font-size:8pt;color:var(--orange);font-weight:700;letter-spacing:.1em">FOUNDER &amp; CEO</div>
+      <div style="font-size:7.5pt;line-height:1.7;margin-top:4mm">+212 600 000 000<br>name@waregro.com<br>waregro.com</div>
+      <img src="../logo/svg/waregro-mark-primary.svg" style="position:absolute;right:6mm;bottom:6mm;height:13mm">
+    </div>
+    <div style="aspect-ratio:210/297;background:#fff;box-shadow:0 2mm 5mm rgba(149,40,1,.25);padding:6mm;position:relative;font-size:5pt;width:62mm">
+      <img src="../logo/svg/waregro-horizontal-primary.svg" style="width:24mm">
+      <div style="margin-top:8mm;line-height:2.2;color:#999">▬▬▬▬▬▬▬▬▬▬▬▬<br>▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬<br>▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬<br>▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬<br>▬▬▬▬▬▬▬▬▬▬</div>
+      <div style="position:absolute;left:0;right:0;bottom:0;height:4mm;background:var(--orange)"></div>
+      <div style="position:absolute;left:6mm;bottom:6mm;color:var(--brown)">waregro.com · hello@waregro.com</div>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>20</span></div>
+</section>
+
+<!-- 21 PACKAGING -->
+<section class="page">
+  <p class="kicker">16 · Applications · Packaging</p>
+  <h1>Shipping box &amp; tape</h1>
+  <div style="display:flex;gap:16mm;align-items:center;justify-content:center;margin-top:4mm">
+    <svg viewBox="0 0 520 470" style="height:120mm">
+      <polygon points="260,20 500,140 260,260 20,140" fill="#FF7a3d"/>
+      <polygon points="20,140 260,260 260,460 20,340" fill="#FF5300"/>
+      <polygon points="500,140 260,260 260,460 500,340" fill="#d94600"/>
+      <polygon points="232,34 288,34 528,154 472,154" fill="#952801" opacity=".0"/>
+      <polygon points="140,80 196,52 436,172 380,200" fill="#952801"/>
+      <g transform="matrix(.9,.45,0,1,40,190)"><image href="../logo/svg/waregro-horizontal-white.svg" x="0" y="0" width="200" height="70"/></g>
+      <g transform="matrix(.9,-.45,0,1,290,330)"><image href="../logo/svg/waregro-mark-white.svg" x="40" y="-30" width="90" height="110"/></g>
+    </svg>
+    <div style="width:80mm">
+      <div style="height:16mm;background:var(--brown);display:flex;align-items:center;gap:6mm;padding:0 4mm;overflow:hidden;border-radius:1mm">
+        <img src="../logo/svg/waregro-horizontal-on-brown.svg" style="height:12mm"><img src="../logo/svg/waregro-horizontal-on-brown.svg" style="height:12mm">
+      </div>
+      <p class="small" style="margin-top:4mm">Kraft or Mystic Red boxes carry the horizontal white logo on the front and the mark on the side. Branded tape uses the Deep Ember version.</p>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>21</span></div>
+</section>
+
+<!-- 22 DIGITAL -->
+<section class="page linen">
+  <p class="kicker">16 · Applications · Digital</p>
+  <h1>Website &amp; app</h1>
+  <div style="display:grid;grid-template-columns:2.2fr 1fr;gap:10mm;margin-top:4mm;align-items:center">
+    <div style="background:#fff;border-radius:3mm;box-shadow:0 2mm 6mm rgba(149,40,1,.2);overflow:hidden">
+      <div style="height:6mm;background:#eee;display:flex;align-items:center;gap:1.5mm;padding:0 3mm"><i style="width:2mm;height:2mm;border-radius:50%;background:#ccc"></i><i style="width:2mm;height:2mm;border-radius:50%;background:#ccc"></i><span style="font-size:7pt;color:#888;margin-left:3mm">https://waregro.com</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:4mm 7mm"><img src="../logo/svg/waregro-horizontal-primary.svg" style="height:10mm"><span style="font-size:8pt;color:var(--brown)">Shop · Suppliers · Deals · <b style="background:var(--orange);color:#fff;padding:1.5mm 4mm;border-radius:6mm">Sign up</b></span></div>
+      <div style="background:var(--orange);color:#fff;padding:10mm 7mm;position:relative;overflow:hidden;height:62mm">
+        <div class="pattern" style="opacity:.1"></div>
+        <div style="font-size:26pt;font-weight:900;line-height:1;position:relative">THE LEAD<br>OF MARKETPLACE</div>
+        <div style="font-size:11pt;margin-top:3mm;position:relative">With WAREGRO buy your stock online.</div>
+        <div style="display:inline-block;margin-top:5mm;background:#fff;color:var(--orange);font-weight:800;padding:2mm 6mm;border-radius:6mm;font-size:10pt;position:relative">Start buying</div>
+        <img src="../logo/svg/waregro-mark-on-orange.svg" style="position:absolute;right:6mm;bottom:-6mm;height:60mm">
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:5mm">
+      <div style="display:flex;gap:4mm">
+        <img src="../logo/svg/waregro-app-icon-orange.svg" style="width:24mm;filter:drop-shadow(0 1mm 2mm rgba(149,40,1,.3))">
+        <img src="../logo/svg/waregro-app-icon-linen.svg" style="width:24mm;filter:drop-shadow(0 1mm 2mm rgba(149,40,1,.3))">
+      </div>
+      <img src="../logo/svg/waregro-app-icon-brown.svg" style="width:24mm;filter:drop-shadow(0 1mm 2mm rgba(149,40,1,.3))">
+      <p class="small" style="text-align:center">App icons &amp; social profile pictures. Favicons are supplied from 16 px to 512 px.</p>
+    </div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>22</span></div>
+</section>
+
+<!-- 23 FILE GUIDE -->
+<section class="page">
+  <p class="kicker">17 · File guide</p>
+  <h1>Which file do I use?</h1>
+  <table style="width:100%;border-collapse:collapse;font-size:10.5pt;margin-top:4mm">
+    <tr style="text-align:left;color:var(--orange)"><th style="padding:2mm 0">Format</th><th>Folder</th><th>Use it for</th><th>Web</th><th>Print</th></tr>
+    <tr style="border-top:1px solid #eee"><td style="padding:3mm 0"><b>SVG</b></td><td>logo/svg</td><td>Websites, apps, and editing: vector, scales to any size</td><td>✓</td><td>✓</td></tr>
+    <tr style="border-top:1px solid #eee"><td style="padding:3mm 0"><b>PDF</b></td><td>logo/pdf</td><td>Printers and print shops: vector artwork</td><td></td><td>✓</td></tr>
+    <tr style="border-top:1px solid #eee"><td style="padding:3mm 0"><b>PNG</b></td><td>logo/png</td><td>Social media, presentations, Word: transparent background</td><td>✓</td><td></td></tr>
+    <tr style="border-top:1px solid #eee"><td style="padding:3mm 0"><b>JPEG</b></td><td>logo/jpeg</td><td>Quick sharing (WhatsApp, email): solid background</td><td>✓</td><td></td></tr>
+    <tr style="border-top:1px solid #eee"><td style="padding:3mm 0"><b>Favicon</b></td><td>logo/favicon</td><td>Browser tab and home-screen icons</td><td>✓</td><td></td></tr>
+  </table>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;margin-top:8mm">
+    <div><h2>RGB / HEX</h2><p class="small">For screens: websites, apps, social media.</p></div>
+    <div><h2>CMYK</h2><p class="small">For printing: cards, flyers, packaging.</p></div>
+    <div><h2>Pantone</h2><p class="small">For exact colour matching on special print jobs.</p></div>
+  </div>
+  <div class="folio"><img src="../logo/svg/waregro-wordmark-latin-primary.svg"><span>23</span></div>
+</section>
+
+<!-- 24 BACK COVER -->
+<section class="page dark" style="padding:0">
+  <div class="pattern brown"></div>
+  <img src="../logo/svg/waregro-stacked-on-brown.svg" style="position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);height:95mm">
+  <div style="position:absolute;left:0;right:0;bottom:20mm;text-align:center;font-size:13pt;letter-spacing:.2em;font-weight:700;color:var(--orange)">WAREGRO.COM</div>
+</section>
+
+</body>
+</html>

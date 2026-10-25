@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024.00 1024.00" width="1024" height="1024">
+  <title>WAREGRO</title>
+  <g>
+    <rect width="1024.0" height="1024.0" rx="225" fill="#FF5300"/>
+    <polyline fill="none" stroke-width="36.25" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" points="739.02,680.24 512.01,811.30 284.98,682.64"/>
+    <polyline fill="none" stroke-width="36.25" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" points="738.99,418.13 512.00,551.54 284.98,418.13"/>
+    <polyline fill="none" stroke-width="36.25" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" points="512.00,551.54 512.00,811.30"/>
+    <polyline fill="none" stroke-width="36.25" stroke-linecap="round" stroke-linejoin="round" stroke="#952801" points="739.02,418.13 739.02,680.24 512.00,551.54 284.98,682.64 284.98,418.13"/>
+    <polyline fill="none" stroke-width="36.25" stroke-linecap="round" stroke-linejoin="round" stroke="#952801" points="512.00,551.54 512.00,219.72"/>
+    <polyline fill="none" stroke-width="36.25" stroke-linecap="round" stroke-linejoin="round" stroke="#952801" points="422.58,303.57 512.00,213.73 601.42,303.57"/>
+  </g>
+</svg>

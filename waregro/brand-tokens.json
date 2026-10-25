@@ -1,0 +1,21 @@
+{
+  "name": "WAREGRO",
+  "nameArabic": "ويرغرو",
+  "website": "waregro.com",
+  "colors": {
+    "mysticRed": { "hex": "#FF5300", "rgb": [255, 83, 0], "cmyk": [0, 67, 100, 0], "pantone": "1655 C (closest)" },
+    "deepEmber": { "hex": "#952801", "rgb": [149, 40, 1], "cmyk": [0, 73, 99, 42], "pantone": "7599 C (closest)" },
+    "linen": { "hex": "#FFECE5", "rgb": [255, 236, 229], "cmyk": [0, 7, 10, 0] },
+    "ink": { "hex": "#1A1A1A", "rgb": [26, 26, 26], "cmyk": [0, 0, 0, 90] },
+    "white": { "hex": "#FFFFFF", "rgb": [255, 255, 255], "cmyk": [0, 0, 0, 0] }
+  },
+  "typography": {
+    "latin": { "brand": "Gelion", "freeSubstitute": "Urbanist", "weights": ["Thin", "Light", "Regular", "Medium", "Bold"] },
+    "arabic": { "brand": "Readex Pro", "weights": ["Light", "Regular", "Medium", "SemiBold", "Bold"] }
+  },
+  "values": ["Guarantee", "Confidence", "Cooperation", "Progress", "Growth"],
+  "taglines": {
+    "en": ["THE LEAD OF MARKETPLACE", "E-commerce becoming more easier", "With WAREGRO buy your stock online", "Buy smart. Grow fast."],
+    "ar": ["المنصة الرائدة في التجارة الإلكترونية", "هل أنت مستعد للتغيير؟", "مع ويرغرو اشترِ سلعتك أونلاين", "اشترِ بذكاء، وكبّر تجارتك"]
+  }
+}

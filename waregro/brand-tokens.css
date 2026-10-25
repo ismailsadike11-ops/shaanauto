@@ -1,0 +1,16 @@
+/* WAREGRO brand tokens: drop into any website or app */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Urbanist:wght@400;500;700;800;900&display=swap');
+
+:root {
+  --waregro-mystic-red: #FF5300;  /* primary */
+  --waregro-deep-ember: #952801;  /* secondary, logo dark */
+  --waregro-linen: #FFECE5;       /* light backgrounds */
+  --waregro-ink: #1A1A1A;         /* text */
+  --waregro-white: #FFFFFF;
+
+  --waregro-font-latin: 'Gelion', 'Urbanist', sans-serif;
+  --waregro-font-arabic: 'Readex Pro', sans-serif;
+
+  --waregro-radius: 12px;
+  --waregro-radius-pill: 999px;
+}
