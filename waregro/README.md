@@ -1,3 +1,5 @@
+> **Archived (2026-10-26):** the brand is back to **WARESOUQ / وير سوق**. Do not use this kit for new work. See `CLAUDE.md` at the repo root.
+
 # WAREGRO · هوية بصرية
 
 ملف الهوية البصرية الكامل لـ **WAREGRO / ويرغرو**، بنفس نظام هوية Waresouq (نفس الألوان، نفس الخطوط، نفس شكل الصندوق)،
