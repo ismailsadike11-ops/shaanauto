@@ -15,4 +15,4 @@
   traders and wholesale shop owners, many with little schooling: keep everything simple, Arabic-first
   (Darija), with big prices and the WhatsApp number on everything.
 - Identity kit lives in `sadik-mode/` (logo generator, brand book, templates).
-- Direction chosen 2026-11-04 from the owner's reference: gold serif S in a Moroccan diamond frame with needle and thread, SADIK MODE in Cinzel, bordeaux #6E1423 + champagne gold #C9A45C + slate navy #1E2230 + cream #F6EFE6. Arabic: الصادق مود. Tagline (2026-11-04): UNDERWEAR · HOMEWEAR · LINGERIE · PYJAMAS. Brand book (24 pages), templates and all logo exports rebuilt with this identity on 2026-11-04.
+- Direction chosen 2026-11-04 from the owner's reference: gold serif S in a Moroccan diamond frame with needle and thread, SADIK MODE in Cinzel, bordeaux #7A1530 + champagne gold #D9A441 + charcoal #1C1C1F + cream #F6EFE6. Arabic: الصادق مود. Tagline (2026-11-04): UNDERWEAR · HOMEWEAR · LINGERIE · PYJAMAS. Brand book (24 pages), templates and all logo exports rebuilt with this identity on 2026-11-04.

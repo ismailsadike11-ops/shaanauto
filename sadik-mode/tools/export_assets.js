@@ -28,9 +28,9 @@ async function main() {
     const svg = fs.readFileSync(path.join(SVG_DIR, file), 'utf8');
     const { w, h } = svgSize(svg);
     const base = file.replace(/\.svg$/, '');
-    // Long edge 3000px for print-quality raster files (rendered via device scale)
+    // Long edge 2000px raster files (print uses the SVG/PDF) (rendered via device scale)
     const vw = Math.ceil(w), vh = Math.ceil(h);
-    const ctx = await browser.newContext({ viewport: { width: vw, height: vh }, deviceScaleFactor: 3000 / Math.max(w, h) });
+    const ctx = await browser.newContext({ viewport: { width: vw, height: vh }, deviceScaleFactor: 2000 / Math.max(w, h) });
     const page = await ctx.newPage();
     const inner = svg.replace(/width="\d+" height="\d+"/, `width="${w}" height="${h}"`);
     await page.setContent(`<html><body style="margin:0;background:transparent">${inner}</body></html>`);
@@ -39,7 +39,7 @@ async function main() {
     // JPEG cannot be transparent: light variants go on white, white/linen ones on brown
     const jpgBg = file.includes('-white') ? '#1C1C1F' : '#FFFFFF';
     await page.setContent(`<html><body style="margin:0;background:${jpgBg}">${inner}</body></html>`);
-    await page.screenshot({ path: path.join(JPG_DIR, `${base}.jpg`), type: 'jpeg', quality: 92, clip: { x: 0, y: 0, width: w, height: h } });
+    await page.screenshot({ path: path.join(JPG_DIR, `${base}.jpg`), type: 'jpeg', quality: 85, clip: { x: 0, y: 0, width: w, height: h } });
 
     // Vector PDF at the SVG's own size (1 SVG unit = 1 CSS px)
     await page.setContent(`<html><head><style>@page{size:${vw}px ${vh}px;margin:0}html,body{margin:0}svg{display:block}</style></head><body>${inner}</body></html>`);
@@ -81,6 +81,7 @@ async function main() {
     await page.goto('file://' + path.join(ROOT, 'mockups', 'leather-showcase.html'));
     await page.waitForTimeout(300);
     await page.screenshot({ path: path.join(ROOT, 'mockups', 'leather-showcase.png') });
+    await page.screenshot({ path: path.join(ROOT, 'mockups', 'leather-showcase.jpg'), type: 'jpeg', quality: 85 });
     await page.close();
   }
 
