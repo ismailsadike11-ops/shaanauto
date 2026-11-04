@@ -72,6 +72,15 @@ async function main() {
     await page.close();
   }
 
+  // Mockups (logo showcase on leather)
+  {
+    const page = await browser.newPage({ viewport: { width: 1584, height: 680 }, deviceScaleFactor: 2 });
+    await page.goto('file://' + path.join(ROOT, 'mockups', 'leather-showcase.html'));
+    await page.waitForTimeout(300);
+    await page.screenshot({ path: path.join(ROOT, 'mockups', 'leather-showcase.png') });
+    await page.close();
+  }
+
   // Brand book
   const book = path.join(ROOT, 'brand-book', 'index.html');
   if (fs.existsSync(book)) {

@@ -19,11 +19,11 @@ FONTS = ROOT / "fonts"
 OUT = ROOT / "logo" / "svg"
 
 # ---- Brand constants -------------------------------------------------------
-BORDEAUX = "#6E1423"
-GOLD = "#C9A45C"      # champagne gold
+BORDEAUX = "#7A1530"
+GOLD = "#D9A441"      # antique champagne gold
 NEEDLE = "#EAD7A8"
 THREAD = "#A3263C"
-SLATE = "#1E2230"     # slate navy
+SLATE = "#1C1C1F"     # charcoal
 CREAM = "#F6EFE6"
 WHITE = "#FFFFFF"
 BLACK = "#111111"
@@ -88,35 +88,60 @@ def diamond(r):
     return f"{c},{c - r} {c + r},{c} {c},{c + r} {c - r},{c}"
 
 
+def metal_defs(uid):
+    """Gradients for the metallic (showcase) versions."""
+    return (f'<linearGradient id="g{uid}" x1="0" y1="0" x2="1" y2="1">'
+            '<stop offset="0" stop-color="#F6E3A6"/><stop offset=".35" stop-color="#D9A441"/>'
+            '<stop offset=".7" stop-color="#9E7121"/><stop offset="1" stop-color="#E9C672"/></linearGradient>'
+            f'<linearGradient id="b{uid}" x1="0" y1="0" x2="0" y2="1">'
+            '<stop offset="0" stop-color="#A8284A"/><stop offset=".55" stop-color="#7A1530"/>'
+            '<stop offset="1" stop-color="#4C0B1C"/></linearGradient>')
+
+
+def star(cx, cy, r, color):
+    """Small 8-point Moroccan star (two squares)."""
+    sq = f'x="{cx - r:.1f}" y="{cy - r:.1f}" width="{2 * r:.1f}" height="{2 * r:.1f}"'
+    return (f'<rect {sq} fill="{color}"/>'
+            f'<rect {sq} fill="{color}" transform="rotate(45 {cx:.1f} {cy:.1f})"/>')
+
+
 def emblem(frame, field, s_col, needle, thread, pattern_col, uid, scale=1.0, ox=0.0, oy=0.0):
     c = EMB / 2
-    # 8-point star tile (Moroccan zellige feel), clipped to the inner diamond
+    r_out, r_in = 186, 150
     tile = (f'<pattern id="z{uid}" width="40" height="40" patternUnits="userSpaceOnUse">'
-            f'<g fill="none" stroke="{pattern_col}" stroke-width="1.3" opacity=".45">'
+            f'<g fill="none" stroke="{pattern_col}" stroke-width="1.3" opacity=".4">'
             '<rect x="10" y="10" width="20" height="20"/>'
             '<rect x="10" y="10" width="20" height="20" transform="rotate(45 20 20)"/>'
             '<path d="M0 0 L10 10 M40 0 L30 10 M0 40 L10 30 M40 40 L30 30"/></g></pattern>'
-            f'<clipPath id="c{uid}"><polygon points="{diamond(142)}"/></clipPath>')
-    s_svg, sw, sh = LAT.block("S", 210, s_col, 0, 0)
-    s_left, s_top = c - sw / 2, c - sh / 2 + 4
-    s_svg, _, _ = LAT.block("S", 210, s_col, s_left, s_top,
+            f'<clipPath id="c{uid}"><polygon points="{diamond(r_in)}"/></clipPath>')
+    # Moroccan stars in the four corners, between the two borders
+    rc = (r_out + r_in) / 2 + 2
+    corners = "".join(star(x, y, 8, frame) for x, y in
+                      ((c, c - rc), (c + rc, c), (c, c + rc), (c - rc, c)))
+    # small fleurons on the four edges of the outer border
+    edges = "".join(star(c + dx * r_out / 2, c + dy * r_out / 2, 4.5, frame)
+                    for dx, dy in ((1, -1), (1, 1), (-1, 1), (-1, -1)))
+    _, sw, sh = LAT.block("S", 220, s_col, 0, 0)
+    s_svg, _, _ = LAT.block("S", 220, s_col, c - sw / 2, c - sh / 2 + 4,
                             extra=f'stroke="{field}" stroke-width="3" paint-order="stroke"')
     ang = 42
-    eye_x = c + 110 * math.sin(math.radians(ang))
-    eye_y = c - 110 * math.cos(math.radians(ang))
-    needle_svg = (f'<g transform="rotate({ang} {c} {c})">'
-                  f'<path d="M200 70 C204 70 206 74 206 80 L203 330 L200 345 L197 330 L194 80 C194 74 196 70 200 70 Z" '
-                  f'fill="{needle}" stroke="{field}" stroke-width="2"/>'
-                  f'<ellipse cx="200" cy="90" rx="2.4" ry="9" fill="{field}"/></g>')
-    thread_svg = (f'<path d="M{eye_x:.1f} {eye_y:.1f} C298 92 344 104 332 140 C322 170 282 162 286 140 '
-                  f'C290 120 322 112 352 80" fill="none" stroke="{thread}" stroke-width="3.2" stroke-linecap="round"/>')
+    eye_x = c + 112 * math.sin(math.radians(ang))
+    eye_y = c - 112 * math.cos(math.radians(ang))
+    needle_path = ('M200 66 C204 66 206 70 206 76 L203 326 L200 342 L197 326 L194 76 C194 70 196 66 200 66 Z')
+    needle_g = (f'<path d="{needle_path}" fill="{needle}" stroke="{field}" stroke-width="2"/>'
+                f'<ellipse cx="200" cy="88" rx="2.4" ry="9" fill="{field}"/>')
+    # interwoven: the whole needle sits behind the S, then its lower half is drawn again in front
+    behind = f'<g transform="rotate({ang} {c} {c})">{needle_g}</g>'
+    front = (f'<clipPath id="n{uid}"><rect x="185" y="212" width="30" height="140"/></clipPath>'
+             f'<g transform="rotate({ang} {c} {c})"><g clip-path="url(#n{uid})">{needle_g}</g></g>')
+    thread_svg = (f'<path d="M{eye_x:.1f} {eye_y:.1f} C300 96 346 108 334 144 C324 174 284 166 288 144 '
+                  f'C292 124 324 116 354 84" fill="none" stroke="{thread}" stroke-width="3.2" stroke-linecap="round"/>')
     body = (f'<defs>{tile}</defs>'
-            f'<polygon points="{diamond(142)}" fill="{field}"/>'
+            f'<polygon points="{diamond(r_in)}" fill="{field}"/>'
             f'<rect width="{EMB}" height="{EMB}" fill="url(#z{uid})" clip-path="url(#c{uid})"/>'
-            f'<polygon points="{diamond(188)}" fill="none" stroke="{frame}" stroke-width="7"/>'
-            f'<polygon points="{diamond(166)}" fill="none" stroke="{frame}" stroke-width="2.5"/>'
-            f'<polygon points="{diamond(142)}" fill="none" stroke="{frame}" stroke-width="4"/>'
-            f'{s_svg}{needle_svg}{thread_svg}')
+            f'<polygon points="{diamond(r_out)}" fill="none" stroke="{frame}" stroke-width="7"/>'
+            f'<polygon points="{diamond(r_in)}" fill="none" stroke="{frame}" stroke-width="4"/>'
+            f'{corners}{edges}{behind}{s_svg}{front}{thread_svg}')
     return f'<g transform="translate({ox:.2f},{oy:.2f}) scale({scale:.4f})">{body}</g>'
 
 
@@ -162,6 +187,8 @@ def text_block(latin, arabic, tag, left, top, with_arabic):
 
 def svg_doc(w, h, body, bg=None, title="SADIK MODE"):
     rect = f'<rect width="100%" height="100%" fill="{bg}"/>' if bg else ""
+    if "url(#gM)" in body:
+        rect = f'<defs>{metal_defs("M")}</defs>' + rect
     return (f'<?xml version="1.0" encoding="UTF-8"?>\n'
             f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w:.2f} {h:.2f}" '
             f'width="{w:.0f}" height="{h:.0f}">\n  <title>{title}</title>\n  {rect}\n  {body}\n</svg>\n')
@@ -210,11 +237,14 @@ def wordmark(v):
 
 # emblem colours: (frame, field, S, needle, thread, pattern); text: (latin, arabic, tagline)
 FULL = (GOLD, BORDEAUX, GOLD, NEEDLE, THREAD, GOLD)
+MG, MB = "url(#gM)", "url(#bM)"  # metallic gold / bordeaux gradients
 VARIANTS = {
     "primary": {"emblem": FULL, "text": (BORDEAUX, BORDEAUX, GOLD), "bg": None},
     "on-cream": {"emblem": FULL, "text": (BORDEAUX, BORDEAUX, GOLD), "bg": CREAM},
-    "on-slate": {"emblem": FULL, "text": ("#B23A4E", GOLD, GOLD), "bg": SLATE},
+    "on-slate": {"emblem": FULL, "text": ("#B8324A", GOLD, GOLD), "bg": SLATE},
     "on-bordeaux": {"emblem": (GOLD, BORDEAUX, GOLD, NEEDLE, NEEDLE, GOLD), "text": (GOLD, GOLD, CREAM), "bg": BORDEAUX},
+    "metal": {"emblem": (MG, MB, MG, "#F3E6C4", THREAD, GOLD), "text": (MB, MB, MG), "bg": None},
+    "metal-dark": {"emblem": (MG, MB, MG, "#F3E6C4", "#B8324A", GOLD), "text": (MB, MG, MG), "bg": SLATE},
     "gold": {"emblem": (GOLD, "none", GOLD, GOLD, GOLD, GOLD), "text": (GOLD, GOLD, GOLD), "bg": None},
     "white": {"emblem": (WHITE, "none", WHITE, WHITE, WHITE, WHITE), "text": (WHITE, WHITE, WHITE), "bg": None},
     "black": {"emblem": (BLACK, "none", BLACK, BLACK, BLACK, BLACK), "text": (BLACK, BLACK, BLACK), "bg": None},
