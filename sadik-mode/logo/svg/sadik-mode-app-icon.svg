@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080.00 1080.00" width="1080" height="1080">
+  <title>SADIK MODE</title>
+  <g>
+    <rect width="1080.0" height="1080.0" rx="238" fill="#16244F"/>
+    <g transform="translate(212.04,367.98) scale(1.6398)"><path fill="none" stroke-width="26.0" stroke-linecap="round" stroke-linejoin="round" stroke="#E3A21A" d="M240 6 C230 -8 214 -14 200 -14 C178 -14 162 0 162 18 C162 38 180 46 200 52 C220 58 238 66 238 86 C238 102 224 112 200 112"/><path fill="none" stroke-width="26.0" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" d="M200 112 L22 236 H378 Z"/></g>
+  </g>
+</svg>

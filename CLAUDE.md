@@ -8,3 +8,11 @@
 - Wherever WAREGRO / ويرغرو was applied (Shopify theme for waresouq.ma, texts, emails, logos),
   it must be changed back to Waresouq / وير سوق.
 - `waregro/` is an archived identity kit. Do not use it for new work unless the owner asks.
+
+# SADIK MODE / صادق مود (new brand, work in progress)
+
+- New wholesale shop for pyjamas and underwear, owned by Ismail Sadik. Customers are traditional
+  traders and wholesale shop owners, many with little schooling: keep everything simple, Arabic-first
+  (Darija), with big prices and the WhatsApp number on everything.
+- Identity kit lives in `sadik-mode/` (logo generator, brand book, templates).
+- Colours are NOT final: the owner rejected navy + gold; options are in `sadik-mode/color-options.png`.
