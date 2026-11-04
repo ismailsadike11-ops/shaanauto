@@ -17,7 +17,10 @@ function svgSize(svg) {
 }
 
 async function main() {
-  for (const d of [PNG_DIR, JPG_DIR, PDF_DIR]) fs.mkdirSync(d, { recursive: true });
+  for (const d of [PNG_DIR, JPG_DIR, PDF_DIR]) {
+    fs.rmSync(d, { recursive: true, force: true });  // drop files of retired logo versions
+    fs.mkdirSync(d, { recursive: true });
+  }
   const browser = await chromium.launch();
   const files = fs.readdirSync(SVG_DIR).filter((f) => f.endsWith('.svg')).sort();
 
@@ -34,7 +37,7 @@ async function main() {
     await page.screenshot({ path: path.join(PNG_DIR, `${base}.png`), omitBackground: true, clip: { x: 0, y: 0, width: w, height: h } });
 
     // JPEG cannot be transparent: light variants go on white, white/linen ones on brown
-    const jpgBg = file.includes('-white') ? '#16244F' : '#FFFFFF';
+    const jpgBg = file.includes('-white') ? '#1C1C1F' : '#FFFFFF';
     await page.setContent(`<html><body style="margin:0;background:${jpgBg}">${inner}</body></html>`);
     await page.screenshot({ path: path.join(JPG_DIR, `${base}.jpg`), type: 'jpeg', quality: 92, clip: { x: 0, y: 0, width: w, height: h } });
 

@@ -105,7 +105,7 @@ def star(cx, cy, r, color):
             f'<rect {sq} fill="{color}" transform="rotate(45 {cx:.1f} {cy:.1f})"/>')
 
 
-def emblem(frame, field, s_col, needle, thread, pattern_col, uid, scale=1.0, ox=0.0, oy=0.0):
+def emblem(frame, field, s_col, needle, thread, pattern_col, uid, scale=1.0, ox=0.0, oy=0.0, simple=False):
     c = EMB / 2
     r_out, r_in = 186, 150
     tile = (f'<pattern id="z{uid}" width="40" height="40" patternUnits="userSpaceOnUse">'
@@ -142,6 +142,11 @@ def emblem(frame, field, s_col, needle, thread, pattern_col, uid, scale=1.0, ox=
             f'<polygon points="{diamond(r_out)}" fill="none" stroke="{frame}" stroke-width="7"/>'
             f'<polygon points="{diamond(r_in)}" fill="none" stroke="{frame}" stroke-width="4"/>'
             f'{corners}{edges}{behind}{s_svg}{front}{thread_svg}')
+    if simple:
+        # small sizes (favicon, stamp, sticker): no pattern, needle or thread, bolder frame
+        body = (f'<polygon points="{diamond(r_in)}" fill="{field}"/>'
+                f'<polygon points="{diamond(r_out)}" fill="none" stroke="{frame}" stroke-width="12"/>'
+                f'<polygon points="{diamond(r_in)}" fill="none" stroke="{frame}" stroke-width="7"/>{s_svg}')
     return f'<g transform="translate({ox:.2f},{oy:.2f}) scale({scale:.4f})">{body}</g>'
 
 
@@ -226,14 +231,14 @@ def stacked(v, uid, with_arabic=False):
     return svg_doc(w, PAD + es + 50 + th + PAD, body, v["bg"])
 
 
-def emblem_only(v, uid):
-    return svg_doc(EMB + 40, EMB + 40, emblem(*v["emblem"], uid, 1, 20, 20), v["bg"])
+def emblem_only(v, uid, simple=False):
+    return svg_doc(EMB + 40, EMB + 40, emblem(*v["emblem"], uid, 1, 20, 20, simple), v["bg"])
 
 
-def profile(v, uid):
+def profile(v, uid, simple=False):
     size = 1080.0
     es = size * 0.8
-    return svg_doc(size, size, emblem(*v["emblem"], uid, es / EMB, (size - es) / 2, (size - es) / 2),
+    return svg_doc(size, size, emblem(*v["emblem"], uid, es / EMB, (size - es) / 2, (size - es) / 2, simple),
                    v["bg"] or CREAM)
 
 
@@ -273,7 +278,9 @@ def main():
     files["sadik-mode-profile-cream.svg"] = profile(VARIANTS["primary"], "p1")
     files["sadik-mode-profile-slate.svg"] = profile(VARIANTS["on-slate"], "p2")
     files["sadik-mode-profile-bordeaux.svg"] = profile(VARIANTS["on-bordeaux"], "p3")
-    files["sadik-mode-app-icon.svg"] = profile(VARIANTS["on-slate"], "p4")
+    for k in ("primary", "gold", "white", "black"):
+        files[f"sadik-mode-emblem-simple-{k}.svg"] = emblem_only(VARIANTS[k], f"es{k}", simple=True)
+    files["sadik-mode-app-icon.svg"] = profile(VARIANTS["on-slate"], "p4", simple=True)
     for name, content in files.items():
         (OUT / name).write_text(content, encoding="utf-8")
     print(f"wrote {len(files)} SVGs to {OUT}")
