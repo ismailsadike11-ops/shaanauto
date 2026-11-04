@@ -30,10 +30,10 @@ BLACK = "#111111"
 
 NAME_LATIN = ("SADIK", "MODE")
 NAME_ARABIC = "الصادق مود"
-TAGLINE = "بيع فقط بالجملة"
+TAGLINE = "UNDERWEAR · HOMEWEAR · LINGERIE · PYJAMAS"
 LATIN_FONT = FONTS / "Cinzel-700.ttf"
 ARABIC_FONT = FONTS / "Amiri-700.ttf"
-TAGLINE_FONT = FONTS / "Cairo-700.ttf"
+TAGLINE_FONT = FONTS / "Montserrat-600.ttf"
 
 
 # ---- Text to outlines ------------------------------------------------------
@@ -179,7 +179,14 @@ def text_block(latin, arabic, tag, left, top, with_arabic):
         ar, arh = arabic_line(AR, NAME_ARABIC, arabic, left + w / 2, y, w * 0.62, 96)
         parts.append(ar)
         y += arh + 26
-    tg, tgh = arabic_line(TAG, TAGLINE, tag, left + w / 2, y, w * 0.55, 70)
+    # tagline spaced out to the full width of SADIK MODE
+    size, lo, hi = 44.0, 0.0, 2000.0
+    for _ in range(30):
+        mid = (lo + hi) / 2
+        b = TAG.bounds(TAGLINE, size, mid)
+        lo, hi = (mid, hi) if b[2] - b[0] < w else (lo, mid)
+    tg, _, tgh = TAG.block(TAGLINE, size, tag, left, y + 8, lo)
+    tgh += 8
     parts.append(tg)
     y += tgh
     return "".join(parts), w, y - top
